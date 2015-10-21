@@ -16,6 +16,10 @@ abstract class AbstractFootwear
 
     public abstract function setSize($size);
 
+    public abstract function getMaterial();
+
+    public abstract function setMaterial($material);
+
     function __get($property)
     {
         return $this->$property;

@@ -36,11 +36,21 @@ class Slippers extends AbstractFootwear
     {
         $this->size = $size;
     }
+    public function getMaterial()
+    {
+        return $this->size;
+    }
+
+    public function setMaterial($material)
+    {
+        $this->size = $material;
+    }
     public function __printScreen()
     {
         $str = 'Name: ' . $this->getName() . "<br>\n";
         $str .= 'Model: ' . $this->getModel() . "<br>\n";
         $str .= 'Size: ' . $this->getSize() . "<br>\n";
+        $str .= 'Material: ' . $this->getMaterial() . "<br>\n";
 
         print_r($str);
     }
