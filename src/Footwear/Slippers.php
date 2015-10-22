@@ -1,63 +1,16 @@
 <?php
+
 namespace Footwear;
 
 class Slippers extends AbstractFootwear
 {
-    protected $name;
-    protected $size;
-    protected $material;
-    protected $type;
-
     /**
-     * @return mixed
+     * @var string
      */
-    public function getName()
-    {
-        return $this->name;
-    }
+    private $type;
 
     /**
-     * @param $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSize()
-    {
-        return $this->size;
-    }
-
-    /**
-     * @param $size
-     */
-    public function setSize($size)
-    {
-        $this->size = $size;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMaterial()
-    {
-        return $this->material;
-    }
-
-    /**
-     * @param $material
-     */
-    public function setMaterial($material)
-    {
-        $this->material = $material;
-    }
-
-    /**
-     * @return mixed
+     * @return string
      */
     public function getType()
     {
@@ -65,12 +18,19 @@ class Slippers extends AbstractFootwear
     }
 
     /**
-     * @param $type
+     * @param string $type
+     * @return $this
      */
     public function setType($type)
     {
         $this->type = $type;
+
+        return $this;
     }
+
+    /**
+     * @return string
+     */
     public function printScreen()
     {
         $str = 'Name: ' . $this->getName() . "<br>\n";
@@ -78,6 +38,6 @@ class Slippers extends AbstractFootwear
         $str .= 'Material: ' . $this->getMaterial() . "<br>\n";
         $str .= 'Type: ' . $this->getType() . "<br>\n";
 
-        print_r($str);
+        return $str;
     }
 }

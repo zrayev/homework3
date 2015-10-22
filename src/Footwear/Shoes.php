@@ -1,65 +1,24 @@
 <?php
+
 namespace Footwear;
 
+/**
+ * Class Shoes
+ * @package Footwear
+ */
 class Shoes extends AbstractFootwear
 {
-    protected $name;
-    protected $size;
-    protected $material;
-    protected $season;
-    protected $shoelace;
-
-
     /**
-     * @return mixed
+     * @var string
      */
-    public function getName()
-    {
-        return $this->name;     // destryct
-    }
-
+    private $season;
     /**
-     * @param $name
+     * @var string
      */
-    public function setName($name)
-    {
-        $this->name = $name; // construct
-    }
+    private $shoelace;
 
     /**
-     * @return mixed
-     */
-    public function getSize()
-    {
-        return $this->size;
-    }
-
-    /**
-     * @param $size
-     */
-    public function setSize($size)
-    {
-        $this->size = $size;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMaterial()
-    {
-        return $this->material;
-    }
-
-    /**
-     * @param $material
-     */
-    public function setMaterial($material)
-    {
-        $this->material = $material;
-    }
-
-    /**
-     * @return mixed
+     * @return string
      */
     public function getSeason()
     {
@@ -68,24 +27,37 @@ class Shoes extends AbstractFootwear
 
     /**
      * @param $season
+     * @return $this
      */
     public function setSeason($season)
     {
         $this->season = $season;
+
+        return $this;
     }
+
     /**
-     * @return mixed
+     * @return string
      */
     public function getShoelace()
     {
         return $this->shoelace;
     }
 
-    public function setShoelace($shoelase)
+    /**
+     * @param $shoelace
+     * @return $this
+     */
+    public function setShoelace($shoelace)
     {
-        $this->shoelace = $shoelase;
+        $this->shoelace = $shoelace;
+
+        return $this;
     }
 
+    /**
+     * @return string
+     */
     public function printScreen()
     {
         $str = 'Name: ' . $this->getName() . "<br>\n";
@@ -94,6 +66,6 @@ class Shoes extends AbstractFootwear
         $str .= 'Season: ' . $this->getSeason() . "<br>\n";
         $str .= 'Shoelace: ' . $this->getShoelace() . "<br>\n";
 
-        print_r($str);
+        return $str;
     }
 }
