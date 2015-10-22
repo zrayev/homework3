@@ -8,10 +8,6 @@ abstract class AbstractFootwear
 
     public abstract function setName($name);
 
-    public abstract function getModel();
-
-    public abstract function setModel($model);
-
     public abstract function getSize();
 
     public abstract function setSize($size);

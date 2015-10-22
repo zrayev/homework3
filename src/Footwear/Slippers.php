@@ -4,53 +4,79 @@ namespace Footwear;
 class Slippers extends AbstractFootwear
 {
     protected $name;
-    protected $model;
     protected $size;
+    protected $material;
+    protected $type;
 
+    /**
+     * @return mixed
+     */
     public function getName()
     {
         return $this->name;
     }
 
+    /**
+     * @param $name
+     */
     public function setName($name)
     {
         $this->name = $name;
     }
 
-    public function getModel()
-    {
-        return $this->model;
-    }
-
-    public function setModel($model)
-    {
-        $this->model = $model;
-    }
-
+    /**
+     * @return mixed
+     */
     public function getSize()
     {
         return $this->size;
     }
 
+    /**
+     * @param $size
+     */
     public function setSize($size)
     {
         $this->size = $size;
     }
+
+    /**
+     * @return mixed
+     */
     public function getMaterial()
     {
-        return $this->size;
+        return $this->material;
     }
 
+    /**
+     * @param $material
+     */
     public function setMaterial($material)
     {
-        $this->size = $material;
+        $this->material = $material;
     }
-    public function __printScreen()
+
+    /**
+     * @return mixed
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+    public function printScreen()
     {
         $str = 'Name: ' . $this->getName() . "<br>\n";
-        $str .= 'Model: ' . $this->getModel() . "<br>\n";
         $str .= 'Size: ' . $this->getSize() . "<br>\n";
         $str .= 'Material: ' . $this->getMaterial() . "<br>\n";
+        $str .= 'Type: ' . $this->getType() . "<br>\n";
 
         print_r($str);
     }
