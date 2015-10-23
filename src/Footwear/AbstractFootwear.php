@@ -12,15 +12,15 @@ abstract class AbstractFootwear
     /**
      * @var string
      */
-    protected $name;
+    private $name;
     /**
      * @var string
      */
-    protected $size;
+    private $size;
     /**
      * @var string
      */
-    protected $material;
+    private $material;
 
     /**
      * @return string
